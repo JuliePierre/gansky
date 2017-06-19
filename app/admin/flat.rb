@@ -15,7 +15,7 @@ permit_params :name, :address, :description, :nb_rooms, :price_per_room, :occupi
 form do |f|
     f.inputs # Include the default inputs
     f.inputs "Facilities" do # Make a panel that holds inputs for lifestyles
-      f.input :flat_facilities, as: :check_boxes, member_label: 'test', collection: Facility.all # Use formtastic to output my collection of checkboxes
+      f.input :flat_facilities, as: :check_boxes, collection: Facility.all.map{|facility| [facility.description, facility.id]} # Use formtastic to output my collection of checkboxes
     end
     f.actions # Include the default actions
   end
