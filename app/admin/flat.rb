@@ -32,7 +32,6 @@ show do
   panel "Facilities" do
     table_for flat.facilities do
       column :description
-      column :number
     end
   end
   active_admin_comments

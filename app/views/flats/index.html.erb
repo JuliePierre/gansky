@@ -1,7 +1,23 @@
-<h1>All flats</h1>
-<% @flats.each do |flat| %>
-  <%= flat.name %>
-  <% flat.facilities.each do |facility| %>
-    <%= facility.description %>
+<h1>GANSKY - NAVBAR</h1>
+<div class="banner bg-blue">
+  <h2>La Coloc Idéale</h2>
+  <p>Les meilleurs offres de colocation à Cergy Préfecture</p>
+  <button>Voir les appartements</button>
+</div>
+<div class="bg-grey">
+  <p>Des colocs entièrement équipées</p>
+  <p>Des prix tout compris et pas de surprise</p>
+  <p>Simple et facile intégralement en ligne</p>
+</div>
+<div class="row">
+  <% @flats.each do |flat| %>
+    <div class="col s12 m6">
+      <div class="flat-card">
+        <%= flat.name %>
+        <% flat.facilities.each do |facility| %>
+          <%= facility.description %>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-<% end %>
+</div>
