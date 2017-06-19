@@ -21,4 +21,19 @@ form do |f|
     f.actions # Include the default actions
   end
 
+show do
+    attributes_table do
+      row :description
+      row :address
+      row :nb_rooms
+      row :price_per_room
+    end
+  panel "Facilities" do
+    table_for flat.facilities do
+      column :description
+      column :number
+    end
+  end
+  active_admin_comments
+end
 end
