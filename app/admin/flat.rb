@@ -27,6 +27,7 @@ show do
       row :address
       row :nb_rooms
       row :price_per_room
+      row :occupied
     end
   panel "Facilities" do
     table_for flat.facilities do

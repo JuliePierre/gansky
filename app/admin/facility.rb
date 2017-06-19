@@ -15,7 +15,6 @@ permit_params :description, :type, :icon
 form do |f|
     f.inputs "Infos de base" do
       f.input :description
-      f.input :category
       f.input :icon, as: :formtastic_attachinary ### THERE ####
     end
     actions
