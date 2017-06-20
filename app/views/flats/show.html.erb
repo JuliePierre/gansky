@@ -61,12 +61,23 @@
         <div class="col s6">
           <% cut = @flat.facilities.size / 2 %>
           <% @flat.facilities[0...cut].each do |facility| %>
-            <p><%= facility.description %></p>
+            <% if !facility.icon.nil? %>
+              <div>
+                <%= cl_image_tag facility.icon.path, class: "facility-icon" %>
+                <%= facility.description %>
+              </div>
+            <% else %>
+              <div><%= image_tag "icon-key", class: "facility-icon" %><%= facility.description %></div>
+            <% end %>
           <% end %>
         </div>
         <div class="col s6">
           <% @flat.facilities[cut...@flat.facilities.size].each do |facility| %>
-            <p><%= facility.description %></p>
+            <% if !facility.icon.nil? %>
+              <div><%= cl_image_tag facility.icon.path, class: "facility-icon" %><%= facility.description %></div>
+            <% else %>
+              <div><%= image_tag "icon-key", class: "facility-icon" %><%= facility.description %></div>
+            <% end %>
           <% end %>
         </div>
       </div>
