@@ -15,12 +15,12 @@
     </div>
   </div>
 
-  <div class="center-flexbox space-between">
+  <div class="start-flexbox space-between">
     <div class="flex-half">
       <%= image_tag ('tatouine.jpg'), class: 'flat-picture' %>
     </div>
-    <div class="flex-half">
-      <h4>Description</h4>
+    <div class="flex-half left-padded flexbox column space-between">
+      <h4 class="no-margin">Description</h4>
       <p><%= @flat.description %></p>
       <p class="text-center">Prix <span class="gras">tout compris</span> incluant</p>
       <div class="start-flexbox">
@@ -47,6 +47,9 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="horizontal-line">
   </div>
 
 </div>
