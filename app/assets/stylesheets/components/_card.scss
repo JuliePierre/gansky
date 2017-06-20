@@ -1,3 +1,41 @@
 .flat-card {
-  background-color: red;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 300px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.flat-card-header {
+  color: white;
+  text-align: center;
+}
+.flat-card-infos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+  color: white;
+}
+.general-infos {
+  padding: 0.75rem 1rem;
+}
+.disponibility {
+  text-align: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  flex: 0 0 20%;
+  &.occupied {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &.free {
+    background-color: green;
+  }
 }
