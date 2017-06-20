@@ -1,15 +1,48 @@
-<h1>GANSKY - NAVBAR</h1>
-<div class="banner bg-blue">
-  <h2>La Coloc Idéale</h2>
-  <p>Les meilleurs offres de colocation à Cergy Préfecture</p>
-  <button>Voir les appartements</button>
+<div id="landing-banner">
+  <div id="landing-background" style="background-image: url(<%= image_url('landing-background.jpg') %>);">
+    <div id="landing-background-infos">
+      <h2>La Coloc Idéale</h2>
+      <p>Les meilleurs offres de colocation à Cergy Préfecture</p>
+      <div id="see-flats-button" class="btn-gansky">Voir les appartements <i class="fa fa-search" aria-hidden="true"></i></div>
+    </div>
+  </div>
+  <div id="landing-introduction" class="bg-grey">
+    <div id="landing-introduction-content" class="container">
+      <div class="content-item">
+        <div class="content-header">
+          <%= image_tag 'icon-table.svg', class: 'landing-icon' %>
+          Des colocs entièrement
+          <span class="red-text">meublées et équipées</span>
+        </div>
+        <div>
+          Des lits 2 places à la machine à café, en passant par le lave-vaisselle et la TV écran plat... Venez uniquement avec vos valises, tout est là !
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="content-header">
+          <%= image_tag 'icon-key.svg', class: 'landing-icon' %>
+          Des prix
+          <span class="red-text">tout compris</span>
+          et pas de suprise
+        </div>
+        <div>
+          Wifi, électricité, chauffage, eau, charges de copro, tout est inclus et vous n’avez rien d’autre à payer. Pas de frais d’agence et seulement un mois de garantie.
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="content-header">
+          <%= image_tag 'icon-web.svg', class: 'landing-icon' %>
+          Simple et facile intégralement en ligne
+        </div>
+        <div>
+          Visitez et réservez votre appartement en ligne. Déposez votre dossier et signez votre bail sans avoir à vous déplacer.
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="bg-grey">
-  <p>Des colocs entièrement équipées</p>
-  <p>Des prix tout compris et pas de surprise</p>
-  <p>Simple et facile intégralement en ligne</p>
-</div>
-<div class="container">
+<div id="landing-flats" class="container">
+  <h3 class="text-center">Découvrir les appartements</h3>
   <div class="row">
     <% @flats.each do |flat| %>
       <div class="col s12 m6">

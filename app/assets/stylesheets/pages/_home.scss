@@ -1,0 +1,23 @@
+#landing-introduction {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+}
+#landing-introduction-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.content-item {
+  flex: 0 0 33%;
+}
+.content-header {
+  text-transform: uppercase;
+}
+#landing-flats{
+  margin-top: 2rem;
+}
+#carte-cergy {
+  width: 100%;
+  display: block;
+}

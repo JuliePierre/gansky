@@ -1,0 +1,16 @@
+#landing-banner {
+  height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#landing-background {
+  height: 100%;
+  padding-top: 5rem;
+  flex: 0 0 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  text-align: center;
+}
