@@ -10,12 +10,18 @@
 }
 .content-item {
   flex: 0 0 33%;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  text-align: justify;
 }
 .content-header {
   text-transform: uppercase;
 }
 #landing-flats{
   margin-top: 2rem;
+  .row .col {
+    padding: 0 1rem;
+  }
 }
 #carte-cergy {
   width: 100%;

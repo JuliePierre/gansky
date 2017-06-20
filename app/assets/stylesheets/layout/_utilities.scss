@@ -25,6 +25,65 @@
 }
 
 // Alignments
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.top-left {
+  top: 0;
+  left: 0;
+}
+.top-right {
+  top: 0;
+  right: 0;
+}
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
 .text-center {
   text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.center-flexbox {
+  display: flex;
+  align-items: center;
+}
+.start-flexbox {
+  display: flex;
+  align-items: flex-start;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.flex-half {
+  flex: 0 0 50%;
+}
+.flex-third {
+  flex: 0 0 33%;
+}
+.flex-quarter {
+  flex: 0 0 25%;
+}
+
+// fonts
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.gras {
+  font-weight: 600;
 }

@@ -11,3 +11,17 @@
   text-decoration: none;
   opacity: 0.8;
 }
+
+.btn-initial {
+  color: white;
+  background-color: red;
+  padding: 10px 55px;
+  border-radius: 10px;
+  font-weight: lighter;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-initial:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
