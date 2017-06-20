@@ -52,4 +52,40 @@
   <div class="horizontal-line">
   </div>
 
+  <div class="row">
+    <div class="col s12 m4">
+      Equipements
+    </div>
+    <div class="col s12 m8">
+      <div class="row">
+        <div class="col s6">
+          <% cut = @flat.facilities.size / 2 %>
+          <% @flat.facilities[0...cut].each do |facility| %>
+            <p><%= facility.description %></p>
+          <% end %>
+        </div>
+        <div class="col s6">
+          <% @flat.facilities[cut...@flat.facilities.size].each do |facility| %>
+            <p><%= facility.description %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="horizontal-line">
+  </div>
+
+    Localisation
+    <div class="row">
+      <div class="col s12 m8">
+        <%= image_tag ('carte-larris-orange.jpg'), class: 'flat-map' %>
+      </div>
+      <div class="col s12 m4">
+        <%= @flat.address %>
+        <p>Appartement idéalement situé, proche de l'Essec et du centre commercial des 3 Fontaines et de la gare RER.</p>
+      </div>
+    </div>
+
 </div>
+
