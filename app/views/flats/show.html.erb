@@ -62,21 +62,30 @@
           <% cut = @flat.facilities.size / 2 %>
           <% @flat.facilities[0...cut].each do |facility| %>
             <% if !facility.icon.nil? %>
-              <div>
+              <div class="center-flexbox small-margin-bottom">
                 <%= cl_image_tag facility.icon.path, class: "facility-icon" %>
-                <%= facility.description %>
+                <div class="facility-description"><%= facility.description %></div>
               </div>
             <% else %>
-              <div><%= image_tag "icon-key", class: "facility-icon" %><%= facility.description %></div>
+              <div class="center-flexbox small-margin-bottom">
+                <%= image_tag 'icon-key.svg', class: "facility-icon" %>
+                <div class="facility-description"><%= facility.description %></div>
+              </div>
             <% end %>
           <% end %>
         </div>
         <div class="col s6">
           <% @flat.facilities[cut...@flat.facilities.size].each do |facility| %>
             <% if !facility.icon.nil? %>
-              <div><%= cl_image_tag facility.icon.path, class: "facility-icon" %><%= facility.description %></div>
+              <div class="center-flexbox small-margin-bottom">
+                <%= cl_image_tag facility.icon.path, class: "facility-icon" %>
+                <div class="facility-description"><%= facility.description %></div>
+              </div>
             <% else %>
-              <div><%= image_tag "icon-key", class: "facility-icon" %><%= facility.description %></div>
+              <div class="center-flexbox small-margin-bottom">
+                <%= image_tag 'icon-key.svg', class: "facility-icon" %>
+                <div class="facility-description"><%= facility.description %></div>
+              </div>
             <% end %>
           <% end %>
         </div>
