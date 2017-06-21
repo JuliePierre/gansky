@@ -3,4 +3,10 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: white;
+  &.full-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
