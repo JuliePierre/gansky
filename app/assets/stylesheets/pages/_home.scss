@@ -1,9 +1,12 @@
-#landing-introduction {
+#landing-explanation {
   flex: 0 0 30%;
   display: flex;
   align-items: center;
 }
-#landing-introduction-content {
+#flat-page-explanation {
+  padding: 2rem 0;
+}
+.explanation-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
