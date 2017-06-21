@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="flex-quarter">
-      <div class="right btn-initial">Réserver</div>
+      <%= link_to "Réserver", new_flat_user_application_path(@flat), class: "btn-initial" %>
     </div>
   </div>
   <div class="start-flexbox space-between">
@@ -105,9 +105,7 @@
   </div>
   <div class="text-center margin-bottom">
     <p>Cet appart vous intéresse ?</p>
-    <div class="btn-initial">
-      Réserver
-    </div>
+    <%= link_to "Réserver", new_flat_user_application_path(@flat), class: "btn-initial" %>
   </div>
 </div>
 

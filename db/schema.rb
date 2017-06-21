@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170619135044) do
+ActiveRecord::Schema.define(version: 20170621084843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,19 @@ ActiveRecord::Schema.define(version: 20170619135044) do
     t.datetime "updated_at",     null: false
   end
 
+  create_table "user_applications", force: :cascade do |t|
+    t.integer  "flat_id"
+    t.string   "applicant_name"
+    t.string   "applicant_email"
+    t.string   "applicant_phone_number"
+    t.text     "applicant_infos"
+    t.boolean  "warrant"
+    t.boolean  "visit_needed"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["flat_id"], name: "index_user_applications_on_flat_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -93,4 +106,5 @@ ActiveRecord::Schema.define(version: 20170619135044) do
 
   add_foreign_key "flat_facilities", "facilities"
   add_foreign_key "flat_facilities", "flats"
+  add_foreign_key "user_applications", "flats"
 end
