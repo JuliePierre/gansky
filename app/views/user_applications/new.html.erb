@@ -1,5 +1,6 @@
 <div class="very-small-container">
-    <%= simple_form_for [@flat, @user_application] do |f| %>
+    <%= simple_form_for([@flat, @user_application] ) do |f| %>
+      <%= f.error_notification %>
 
       <div id="step1">
         <div class="form-intro text-center">
@@ -30,17 +31,17 @@
         <div class="start-flexbox space-between">
           <p class="flex-third no-margin">Avez-vous des garants ?</p>
           <div id="warrant-form-input" class="flex-half start-flexbox">
-            <%= f.collection_check_boxes :warrant, [[true, 'Oui'] ,[false, 'Non']], :first, :last %>
+            <%= f.collection_check_boxes :warrant, [[true, 'Oui'] ,[false, 'Non']], :first, :last, required: true %>
           </div>
         </div>
         <div class="start-flexbox space-between">
           <p class="flex-third no-margin">Souhaitez-vous une visite physique du bien ?</p>
           <div id="visit-form-input" class="flex-half start-flexbox">
-            <%= f.collection_check_boxes :visit_needed, [[true, 'Oui, indispensable'] ,[false, "Non, j'ai vu la visite virtuelle"]], :first, :last, input_html: { class: 'test' } %>
+            <%= f.collection_check_boxes :visit_needed, [[true, 'Oui, indispensable'] ,[false, "Non, j'ai vu la visite virtuelle"]], :first, :last %>
           </div>
         </div>
       </div>
 
-    <%= f.submit "Terminé", class: "btn-initial text-cente" %>
+    <%= f.submit "Terminé", class: "btn-initial text-center" %>
     <% end %>
 </div>
