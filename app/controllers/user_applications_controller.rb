@@ -10,10 +10,8 @@ class UserApplicationsController < ApplicationController
     @user_application = UserApplication.new(user_application_params)
     @flat = Flat.find(params[:flat_id])
     if params[:user_application]["warrant"][1].nil? || params[:user_application]["visit_needed"][1].nil?
-      respond_to do |format|
-        format.js  # <-- will render `app/views/user_applications/create.js.erb`
-        format.html { render :new }
-      end
+      flash[:notice] = "N'oubliez pas de remplir les cases vides"
+      render :new
     else
       @user_application.warrant = ( params[:user_application]["warrant"][1] == "true" )
       @user_application.visit_needed = ( params[:user_application]["visit_needed"][1] == "true" )

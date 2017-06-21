@@ -18,7 +18,9 @@
         </div>
       </div>
 
-      <div id="step2">
+      <div id="show-step2-btn" class="btn-initial">Valider</div>
+
+      <div id="step2" class="hidden">
         <div class="form-intro text-center">
           <div>Etape 2 sur 2</div>
           <p class="text-center">Votre dossier, vos colocs ...</p>
@@ -42,6 +44,8 @@
         </div>
       </div>
 
-    <%= f.submit "Terminé", class: "btn-initial text-center" %>
+      <div id="submit-btn" class="hidden">
+        <%= f.submit "Terminé", class: "btn-initial text-center" %>
+    </div>
     <% end %>
 </div>
