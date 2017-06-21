@@ -2,12 +2,22 @@
   height: 6rem;
 }
 .flat-infos-header {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 500;
+  color: $brand-dark-grey;
 }
 .flat-first-header {
   display: inline-block;
   width: 100%;
+}
+.flat-second-header {
+  .left {
+    font-size: 18px;
+  }
+  .right {
+    font-size: 20px;
+  }
 }
 .flat-picture {
   width: 100%;

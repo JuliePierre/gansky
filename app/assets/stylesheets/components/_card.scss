@@ -6,6 +6,10 @@
   height: 300px;
   margin-bottom: 1rem;
   position: relative;
+  &:hover {
+    background-color: white;
+    opacity: 0.8;
+  }
 }
 .flat-card-header {
   color: white;

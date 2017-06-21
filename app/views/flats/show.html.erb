@@ -6,12 +6,12 @@
         <div class="text-right right">Loyer mensuel<br>tout compris</div>
       </div>
       <div class="flat-second-header">
-        <div class="left"><%= @flat.nb_rooms %> Chambres | Meublé</div>
-        <div class="right"><%= @flat.price_per_room %>€/chambre</div>
+        <div class="left"><span class="gras"><%= @flat.nb_rooms %></span> Chambres | Meublé</div>
+        <div class="right gras"><%= @flat.price_per_room %>€ <span class="small-text">/chambre</span></div>
       </div>
     </div>
     <div class="flex-quarter">
-      <%= link_to "Réserver", new_flat_user_application_path(@flat), class: "btn-initial" %>
+      <%= link_to "Réserver", new_flat_user_application_path(@flat), class: "btn-initial right" %>
     </div>
   </div>
   <div class="start-flexbox space-between">
@@ -19,7 +19,7 @@
       <%= image_tag ('tatouine.jpg'), class: 'flat-picture' %>
     </div>
     <div class="flex-half left-padded flexbox column space-between">
-      <h4 class="no-margin">Description</h4>
+      <div class="content-sub-header">Description</div>
       <p><%= @flat.description %></p>
       <p class="text-center">Prix <span class="gras">tout compris</span> incluant</p>
       <div class="start-flexbox">
@@ -51,7 +51,9 @@
   </div>
   <div class="row">
     <div class="col s12 m4">
-      Equipements
+      <div class="content-sub-header">
+        Equipements
+      </div>
     </div>
     <div class="col s12 m8">
       <div class="row">
@@ -91,7 +93,9 @@
   </div>
   <div class="horizontal-line">
   </div>
-    Localisation
+    <div class="content-sub-header">
+      Localisation
+    </div>
     <div class="row">
       <div class="col s12 m8">
         <%= image_tag ('carte-larris-orange.jpg'), class: 'flat-map' %>
@@ -112,24 +116,27 @@
   <div id="flat-page-explanation" class="bg-grey">
     <div class=" container explanation-content">
       <div class="content-item">
-        <div class="content-header">
+        <div class="content-header center-flexbox">
           <%= image_tag 'icon-table.svg', class: 'landing-icon' %>
-          Des colocs entièrement
-          <span class="red-text">meublées et équipées</span>
+          <div class="left-padded">
+            Des colocs entièrement <span class="red-text">meublées et équipées</span>
+          </div>
         </div>
       </div>
       <div class="content-item">
-        <div class="content-header">
+        <div class="content-header center-flexbox">
           <%= image_tag 'icon-key.svg', class: 'landing-icon' %>
-          Des prix
-          <span class="red-text">tout compris</span>
-          et pas de suprise
+          <div class="left-padded">
+          Des prix <span class="red-text">tout compris</span> et pas de suprise
+          </div>
         </div>
       </div>
       <div class="content-item">
-        <div class="content-header">
+        <div class="content-header center-flexbox">
           <%= image_tag 'icon-web.svg', class: 'landing-icon' %>
-          Simple et facile intégralement en ligne
+          <div class="left-padded">
+            Simple et facile intégralement en ligne
+          </div>
         </div>
       </div>
     </div>
