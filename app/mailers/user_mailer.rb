@@ -7,8 +7,9 @@ class UserMailer < ApplicationMailer
   #
   def confirmation(user_application)
     @user = user_application
-    @greeting = "Hi"
 
-    mail(to: @user.applicant_email, subject: 'Welcome to Le Wagon')
+    attachments.inline['logo-gansky.png'] = File.read("#{Rails.root}/app/assets/images/logo-gansky.png")
+
+    mail(to: @user.applicant_email, subject: 'Votre dossier de réservation a bien été envoyé à Gansky')
   end
 end

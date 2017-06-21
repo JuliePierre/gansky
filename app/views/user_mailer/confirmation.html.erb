@@ -1,5 +1,19 @@
-Hi <%= @user.applicant_name %>,
-
-Today we'll talk about SMTP and Postmark!
-
-See ya!
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <%= stylesheet_link_tag    'email'%>
+  </head>
+  <body>
+    <div class='wrap'>
+      <%= image_tag(attachments['logo-gansky.png'].url, class: 'logo') %>
+      <p class='greeting'>Hi, John</p>
+      <p>Merci pour votre demande.</p>
+      <p>Nous vous contacterons dans les meilleurs délais.</p>
+      <div class='footer'>
+        Suivez-nous sur Facebook !
+        <%= link_to "Retour sur le site", root_url %>
+      </div>
+    </div>
+  </body>
+</html>
