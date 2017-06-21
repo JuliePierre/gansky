@@ -1,11 +1,14 @@
 .btn-gansky {
   color: white;
-  background-color: red;
-  padding: 10px 15px;
+  background-color: $brand-red;
+  padding: 12px 40px;
   border-radius: 50px;
-  font-weight: lighter;
+  font-size: 22px;
   cursor: pointer;
   display: inline-block;
+  .fa {
+    margin-left: 1rem;
+  }
 }
 .btn-gansky:hover {
   text-decoration: none;
@@ -14,7 +17,7 @@
 
 .btn-initial {
   color: white;
-  background-color: red;
+  background-color: $brand-red;
   padding: 10px 55px;
   border-radius: 10px;
   font-weight: lighter;

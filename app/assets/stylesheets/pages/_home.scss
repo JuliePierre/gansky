@@ -1,5 +1,24 @@
+#see-flats-button {
+  margin-top: 50px;
+}
+#landing-bg-icon {
+  margin-bottom: 20px;
+}
+.header {
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.subtitle {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 300;
+}
+
 #landing-explanation {
-  flex: 0 0 30%;
+  flex: 0 0 26%;
   display: flex;
   align-items: center;
 }
@@ -15,7 +34,6 @@
   flex: 0 0 33%;
   padding: 0 1rem;
   font-size: 0.9rem;
-  text-align: justify;
 }
 .content-header {
   text-transform: uppercase;

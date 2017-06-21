@@ -10,6 +10,10 @@
 .flat-card-header {
   color: white;
   text-align: center;
+  h3 {
+    font-size: 30px;
+    margin: 0;
+  }
 }
 .flat-card-infos {
   position: absolute;
@@ -18,7 +22,7 @@
   right: 0;
   display: flex;
   justify-content: space-between;
-  background-color: grey;
+  background-color: $brand-dark-grey;
   color: white;
 }
 .general-infos {
@@ -28,16 +32,22 @@
   text-align: center;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  flex: 0 0 20%;
+  flex: 0 0 25%;
   &.occupied {
-    background-color: red;
+    background-color: $brand-blue;
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
   &.free {
-    background-color: green;
+    background-color: $brand-green;
   }
+}
+.infos-sub-header {
+  font-size: 16px;
+}
+.infos-subtitle {
+  font-size: 12px;
 }
 .card-link {
   position: absolute;

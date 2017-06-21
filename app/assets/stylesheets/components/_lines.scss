@@ -1,6 +1,15 @@
 .horizontal-line {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid $brand-bg-grey;
   width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.small-line-container {
+  padding: 0 25px;
+}
+.small-horizontal-line {
+  border-bottom: 2px solid white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
 }
