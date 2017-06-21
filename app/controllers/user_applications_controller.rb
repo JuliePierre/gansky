@@ -17,6 +17,8 @@ class UserApplicationsController < ApplicationController
       @user_application.visit_needed = ( params[:user_application]["visit_needed"][1] == "true" )
       @user_application.flat = @flat
       if @user_application.save
+        UserMailer.confirmation(@user_application).deliver_now
+        flash[:notice] = "Nous avons bien enregistré votre demande"
         redirect_to flat_path(@flat)
       else
         render :new
