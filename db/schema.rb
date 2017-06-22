@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170622130214) do
+ActiveRecord::Schema.define(version: 20170622131127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,9 +69,14 @@ ActiveRecord::Schema.define(version: 20170622130214) do
     t.integer  "nb_rooms"
     t.float    "price_per_room"
     t.boolean  "occupied"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "slug"
+    t.text     "sub_description"
+    t.string   "zipcode"
+    t.string   "city"
+    t.string   "neighborhood"
+    t.string   "availability_date"
     t.index ["slug"], name: "index_flats_on_slug", unique: true, using: :btree
   end
 

@@ -56,7 +56,7 @@
             <div class="small-line-container">
               <div class="small-horizontal-line"></div>
             </div>
-            <div>Cergy Préfecture</div>
+            <div><%= flat.neighborhood %></div>
           </div>
           <div class="flat-card-infos">
             <div class="general-infos">
@@ -70,7 +70,7 @@
             <% else %>
               <div class="disponibility free">
                 <div class="infos-sub-header">Disponible</div>
-                <div class="infos-subtitle">1er Août 2017</div>
+                <div class="infos-subtitle"><%= flat.availability_date %></div>
               </div>
             <% end %>
           </div>

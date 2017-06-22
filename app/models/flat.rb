@@ -8,4 +8,16 @@ class Flat < ApplicationRecord
 
   accepts_nested_attributes_for :flat_facilities
   accepts_nested_attributes_for :facilities
+
+  validates :name, presence: true
+  validates :address, presence: true
+  validates :description, presence: true
+  validates :nb_rooms, presence: true
+  validates :price_per_room, presence: true
+  validates :occupied, inclusion: { in: [true, false] }
+  validates :sub_description, presence: true
+  validates :zipcode, presence: true
+  validates :city, presence: true
+  validates :neighborhood, presence: true
+  validates :availability_date, presence: true
 end

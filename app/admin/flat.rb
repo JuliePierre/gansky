@@ -2,7 +2,14 @@ ActiveAdmin.register Flat do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :name, :address, :description, :nb_rooms, :price_per_room, :occupied, facility_ids: []
+
+controller do
+  def find_resource
+    scoped_collection.friendly.find(params[:id])
+  end
+end
+
+permit_params :name, :address, :zipcode, :city, :neighborhood, :description, :sub_description, :nb_rooms, :price_per_room, :occupied, :availability_date, facility_ids: []
 #
 # or
 #
@@ -24,10 +31,15 @@ form do |f|
 show do
     attributes_table do
       row :description
+      row :sub_description
       row :address
+      row :zipcode
+      row :city
+      row :neighborhood
       row :nb_rooms
       row :price_per_room
       row :occupied
+      row :availability_date
     end
   panel "Facilities" do
     table_for flat.facilities do
