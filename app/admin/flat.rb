@@ -9,7 +9,7 @@ controller do
   end
 end
 
-permit_params :name, :address, :zipcode, :city, :neighborhood, :description, :sub_description, :nb_rooms, :price_per_room, :occupied, :availability_date, facility_ids: []
+permit_params :name, :address, :zipcode, :city, :neighborhood, :description, :sub_description, :nb_rooms, :price_per_room, :occupied, :availability_date, :map_picture, facility_ids: []
 #
 # or
 #
@@ -22,6 +22,7 @@ permit_params :name, :address, :zipcode, :city, :neighborhood, :description, :su
 form do |f|
     f.semantic_errors *f.object.errors.keys
     f.inputs # Include the default inputs
+    f.input :map_picture, as: :formtastic_attachinary
     f.inputs "Facilities" do # Make a panel that holds inputs for lifestyles
       f.input :facilities, as: :check_boxes, collection: Facility.all.map{|facility| [facility.description, facility.id]} # Use formtastic to output my collection of checkboxes
     end
@@ -40,6 +41,7 @@ show do
       row :price_per_room
       row :occupied
       row :availability_date
+      row :map_picture
     end
   panel "Facilities" do
     table_for flat.facilities do
