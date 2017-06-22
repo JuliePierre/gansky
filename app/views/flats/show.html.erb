@@ -89,7 +89,12 @@
       <div class="row">
         <div class="col s6">
           <% cut = @flat.facilities.size / 2 %>
-          <% @flat.facilities[0..cut].each do |facility| %>
+          <% if cut.even? %>
+            <% sep = cut %>
+          <% else %>
+            <% sep = cut + 1 %>
+          <% end %>
+          <% @flat.facilities[0...sep].each do |facility| %>
             <% if !facility.icon.nil? %>
               <div class="center-flexbox small-margin-bottom">
                 <%= cl_image_tag facility.icon.path, class: "facility-icon" %>
@@ -104,7 +109,7 @@
           <% end %>
         </div>
         <div class="col s6">
-          <% @flat.facilities[cut + 1...@flat.facilities.size].each do |facility| %>
+          <% @flat.facilities[sep...@flat.facilities.size].each do |facility| %>
             <% if !facility.icon.nil? %>
               <div class="center-flexbox small-margin-bottom">
                 <%= cl_image_tag facility.icon.path, class: "facility-icon" %>
