@@ -27,6 +27,8 @@ gem 'coffee-rails'
 
 gem 'friendly_id', '~> 5.1.0'
 
+gem 'bootstrap-glyphicons'
+
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 

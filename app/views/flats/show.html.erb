@@ -22,7 +22,31 @@
   </div>
   <div class="start-flexbox space-between">
     <div class="flex-half">
-      <%= image_tag ('tatouine.jpg'), class: 'flat-picture' %>
+      <!-- Carousel -->
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <%= cl_image_tag @flat.photos.first.path, width: 470, height: 350, crop: :fill %>
+          </div>
+          <% @flat.photos[1...@flat.photos.size].each do |photo| %>
+            <div class="item">
+              <%= cl_image_tag photo.path, width: 470, height: 350, crop: :fill %>
+            </div>
+          <% end %>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
     <div class="flex-half left-padded flexbox column space-between">
       <div class="content-sub-header">Description</div>
@@ -122,6 +146,10 @@
       <% end %>
   </div>
 </div>
+
+
+
+
 
   <div id="flat-page-explanation" class="bg-grey">
     <div class=" container explanation-content">

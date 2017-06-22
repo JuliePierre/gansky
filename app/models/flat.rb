@@ -2,6 +2,7 @@ class Flat < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
   has_attachment :map_picture
+  has_attachments :photos, maximum: 6
 
   has_many :flat_facilities, dependent: :destroy
   has_many :facilities, through: :flat_facilities
