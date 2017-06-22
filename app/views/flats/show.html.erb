@@ -144,8 +144,10 @@
   </div>
   <div class="text-center margin-bottom">
     <p>Cet appart vous intéresse ?</p>
-    <% if @flat.occupied? %>
-        <div class="btn-application btn-occupied text-center">Déjà Loué <br><span class="very-small-text">Voir les autres apparts</span></div>
+      <% if @flat.occupied? %>
+        <%= link_to(root_path, class: 'btn-application btn-occupied text-center') do %>
+          Déjà Loué <br><span class="very-small-text">Voir les autres apparts</span>
+        <% end %>
       <% else %>
         <%= link_to "Réserver", new_flat_user_application_path(@flat), class: "btn-application" %>
       <% end %>
