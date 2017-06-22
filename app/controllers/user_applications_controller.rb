@@ -10,7 +10,6 @@ class UserApplicationsController < ApplicationController
     @user_application = UserApplication.new(user_application_params)
     @flat = Flat.friendly.find(params[:flat_id])
     if params[:user_application]["warrant"][1].nil? || params[:user_application]["visit_needed"][1].nil?
-      flash[:notice] = "N'oubliez pas de remplir les cases vides"
       render :new
     else
       @user_application.warrant = ( params[:user_application]["warrant"][1] == "true" )
