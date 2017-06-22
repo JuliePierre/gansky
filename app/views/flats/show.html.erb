@@ -11,7 +11,13 @@
       </div>
     </div>
     <div class="flex-quarter">
-      <%= link_to "Réserver", new_flat_user_application_path(@flat), class: "btn-initial right" %>
+      <% if @flat.occupied? %>
+        <%= link_to(root_path, class: 'btn-application btn-occupied right text-center') do %>
+          Déjà Loué <br><span class="very-small-text">Voir les autres apparts</span>
+        <% end %>
+      <% else %>
+        <%= link_to "Réserver", new_flat_user_application_path(@flat), class: "btn-application right" %>
+      <% end %>
     </div>
   </div>
   <div class="start-flexbox space-between">
@@ -101,15 +107,19 @@
         <%= image_tag ('carte-larris-orange.jpg'), class: 'flat-map' %>
       </div>
       <div class="col s12 m4">
-        <%= @flat.address %>
-        <p>Appartement idéalement situé, proche de l'Essec et du centre commercial des 3 Fontaines et de la gare RER.</p>
+        <span class="gras"><%= @flat.address %></span>, <%= @flat.neighborhood %>
+        <p><%= @flat.sub_description %></p>
       </div>
     </div>
   <div class="horizontal-line">
   </div>
   <div class="text-center margin-bottom">
     <p>Cet appart vous intéresse ?</p>
-    <%= link_to "Réserver", new_flat_user_application_path(@flat), class: "btn-initial" %>
+    <% if @flat.occupied? %>
+        <div class="btn-application btn-occupied text-center">Déjà Loué <br><span class="very-small-text">Voir les autres apparts</span></div>
+      <% else %>
+        <%= link_to "Réserver", new_flat_user_application_path(@flat), class: "btn-application" %>
+      <% end %>
   </div>
 </div>
 
