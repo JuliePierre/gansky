@@ -19,7 +19,6 @@ class UserApplicationsController < ApplicationController
       if @user_application.save
         UserMailer.confirmation(@user_application).deliver_now
         UserApplicationMailer.new_application(@user_application).deliver_now
-        flash[:notice] = "Nous avons bien enregistré votre demande"
         redirect_to  flat_user_application_path(@flat, @user_application)
       else
         render :new

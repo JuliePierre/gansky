@@ -10,5 +10,6 @@ $('#show-step2-btn').click(function(){
     $('#step2').slideDown();
     $('#submit-btn').slideDown();
     $('#show-step2-btn').css({"display": "none" });
+    $('#footer').removeClass('full-bottom');
   };
 });
