@@ -10,6 +10,9 @@
     background-color: white;
     opacity: 0.8;
   }
+  @media (max-width: $small-screen) {
+    height: 240px;
+  }
 }
 .flat-card-header {
   color: white;

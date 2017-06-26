@@ -4,6 +4,11 @@
   font-weight: 300;
   margin-top: 50px;
   margin-bottom: 50px;
+  @media (max-width: $small-screen) {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 .content-sub-header {
   font-size: 18px;

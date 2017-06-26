@@ -9,6 +9,11 @@
   .fa {
     margin-left: 1rem;
   }
+  @media (max-width: $small-screen) {
+    font-size: 15px;
+    padding: 10px 28px;
+
+  }
 }
 .btn-gansky:hover {
   text-decoration: none;
