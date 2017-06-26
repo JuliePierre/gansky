@@ -60,3 +60,8 @@
     margin-left: 0.5rem;
   }
 }
+#submit-btn {
+  @media (max-width: $small-screen) {
+    margin-bottom: 2rem;
+  }
+}
