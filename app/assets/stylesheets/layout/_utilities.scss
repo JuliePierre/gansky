@@ -95,6 +95,9 @@ body {
 }
 .flex-quarter {
   flex: 0 0 25%;
+  @media (max-width: $small-screen) {
+    flex: 0 0 20%;
+  }
 }
 .flexbox {
   display: flex;
