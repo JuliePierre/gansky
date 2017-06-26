@@ -16,6 +16,10 @@
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 2rem;
+  @media (max-width: $small-screen) {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
 }
 .small-text {
   font-weight: initial;

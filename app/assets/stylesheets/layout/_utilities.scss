@@ -76,6 +76,7 @@ body {
 .start-flexbox {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 .space-between {
   justify-content: space-between;
@@ -101,7 +102,12 @@ body {
     flex-direction: column;
   }
 }
-
+.mobile-flex-full {
+  @media (max-width: $small-screen) {
+    flex: 0 0 100%;
+    padding-left: 0;
+  }
+}
 // fonts
 .uppercase {
   text-transform: uppercase;

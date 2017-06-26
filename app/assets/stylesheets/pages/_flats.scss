@@ -1,5 +1,9 @@
 .flat-top-infos {
   height: 6rem;
+  @media (max-width: $small-screen) {
+    flex: 0 0 100%;
+    width: 100%;
+  }
 }
 .flat-infos-header {
   font-size: 50px;
@@ -29,7 +33,13 @@
 }
 .facility-icon {
   height: 30px;
+  @media (max-width: $small-screen) {
+    height: 20px;
+  }
 }
 .facility-description {
   margin-left: 1rem;
+  @media (max-width: $small-screen) {
+    margin-left: 0.5rem;
+  }
 }
