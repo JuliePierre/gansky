@@ -1,5 +1,8 @@
 #landing-banner {
   height: calc(100vh - 110px);
+  @media (max-width: $small-screen) {
+    height: calc(100vh - 56px);
+  }
 }
 #landing-background {
   height: 100%;

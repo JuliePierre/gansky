@@ -1,6 +1,9 @@
 .navbar {
   height: 110px;
   margin-bottom: 0 !important;
+  @media (max-width: $small-screen) {
+    height: 56px;
+  }
   .container {
     height: 100%;
   }
@@ -10,6 +13,10 @@
   height: 100%;
   img {
     height: 100%;
+  }
+  @media (max-width: $small-screen) {
+    display: flex;
+    justify-content: space-around;
   }
 }
 .brand-logo-subtitle {

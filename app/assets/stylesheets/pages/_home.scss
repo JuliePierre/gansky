@@ -6,6 +6,9 @@
 }
 #landing-bg-icon {
   margin-bottom: 20px;
+  @media (max-width: $small-screen) {
+    height: 20px;
+  }
 }
 .header {
   text-transform: uppercase;
@@ -72,7 +75,6 @@
   text-transform: uppercase;
 }
 #landing-flats{
-  margin-top: 2rem;
   .row .col {
     padding: 0 1rem;
   }
