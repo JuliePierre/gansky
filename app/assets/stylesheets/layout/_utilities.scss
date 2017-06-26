@@ -108,6 +108,16 @@ body {
     padding-left: 0;
   }
 }
+.mobile-full {
+  @media (max-width: $small-screen) {
+    width: 100%;
+  }
+}
+.mobile-container {
+  @media (max-width: $small-screen) {
+    width: 90%;
+  }
+}
 // fonts
 .uppercase {
   text-transform: uppercase;

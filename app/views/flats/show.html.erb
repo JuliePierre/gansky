@@ -20,6 +20,8 @@
       <% end %>
     </div>
   </div>
+</div>
+<div class="container mobile-full">
   <div class="start-flexbox space-between">
     <div class="flex-half mobile-flex-full">
       <!-- Carousel -->
@@ -48,7 +50,7 @@
         </a>
       </div>
     </div>
-    <div class="flex-half left-padded flexbox column space-between mobile-flex-full">
+    <div class="flex-half left-padded flexbox column space-between hide-on-small-only">
       <div class="content-sub-header">Description</div>
       <p class="no-margin"><%= @flat.description %></p>
       <p class="text-center">Prix <span class="gras">tout compris</span> incluant</p>
@@ -77,6 +79,38 @@
       </div>
     </div>
   </div>
+</div>
+<div class="container hide-on-med-and-up">
+  <div class="flex-half flexbox column space-between">
+    <div class="content-sub-header">Description</div>
+    <p class="no-margin"><%= @flat.description %></p>
+    <p class="text-center">Prix <span class="gras">tout compris</span> incluant</p>
+    <div class="start-flexbox">
+      <div class="flex-quarter text-center uppercase">
+        <%= image_tag 'icon-electricity.svg', class: 'landing-icon' %>
+        <br>
+        Electricité
+      </div>
+      <div class="flex-quarter text-center uppercase">
+        <%= image_tag 'icon-wifi.svg', class: 'landing-icon' %>
+        <br>
+        Wifi
+      </div>
+      <div class="flex-quarter text-center uppercase">
+        <%= image_tag 'icon-tap.svg', class: 'landing-icon' %>
+        <br>
+        Eau<br>
+        Chauffage
+      </div>
+      <div class="flex-quarter text-center uppercase">
+        <%= image_tag 'icon-tv.svg', class: 'landing-icon' %>
+        <br>
+        Tv
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
   <div class="horizontal-line">
   </div>
   <div class="row">

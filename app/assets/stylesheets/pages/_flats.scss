@@ -10,17 +10,34 @@
   line-height: 50px;
   font-weight: 500;
   color: $brand-dark-grey;
+  @media (max-width: $small-screen) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 .flat-first-header {
   display: inline-block;
   width: 100%;
+  .right {
+    @media (max-width: $small-screen) {
+      line-height: 15px;
+    }
+  }
 }
 .flat-second-header {
   .left {
     font-size: 18px;
+    @media (max-width: $small-screen) {
+      font-size: 15px;
+      line-height: 30px;
+    }
   }
   .right {
     font-size: 20px;
+    @media (max-width: $small-screen) {
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 }
 .flat-picture {
