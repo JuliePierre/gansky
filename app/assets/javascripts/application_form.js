@@ -10,9 +10,7 @@ $('#show-step2-btn').click(function(){
     $('#step2').slideDown();
     $('#submit-btn').slideDown();
     $('#show-step2-btn').css({"display": "none" });
-    if ($(window).height() < $('#footer').offset().top) {
-      $('#footer').removeClass('full-bottom');
-    };
+    $('#footer').removeClass('full-bottom');
   } else {
     var $toastContent = $("<span>Vous ne pouvez pas valider des champs vides</span>");
     Materialize.toast($toastContent, 5000);
