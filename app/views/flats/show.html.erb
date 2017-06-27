@@ -1,6 +1,18 @@
 <%= content_for(:navbar) do %>
   <%= render 'shared/navbar' %>
 <% end %>
+<%= content_for(:meta_title) do %>
+  <%= "Gansky - Appartement #{@flat.name} - #{@flat.nb_rooms} Chambres" %>
+<% end %>
+<%= content_for(:meta_description) do %>
+  <%= "#{@flat.name}, un appartement de #{@flat.nb_rooms} chambres dans le quartier #{@flat.neighborhood}, idéal pour une colocation." %>
+<% end %>
+<%= content_for(:facebook_meta_title) do %>
+  <%= "Disponible - #{@flat.nb_rooms} Chambres - Proche de l'Essec" %>
+<% end %>
+<%= content_for(:facebook_meta_description) do %>
+  <%= "Appartement refait à neuf, entièrement meublé et équipé : #{@flat.nb_rooms} chambres avec lits 2 places, lave-vaisselle, lave-linge, TV, etc" %>
+<% end %>
 
 <div class="container margin-top">
   <div class="center-flexbox space-between small-margin-bottom">
