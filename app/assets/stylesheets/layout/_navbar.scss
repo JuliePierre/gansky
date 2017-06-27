@@ -1,4 +1,5 @@
-.navbar {
+// Home navbar
+.home-navbar {
   height: 110px;
   margin-bottom: 0 !important;
   @media (max-width: $small-screen) {
@@ -21,4 +22,40 @@
 }
 .brand-logo-subtitle {
   text-transform: uppercase;
+}
+
+// Other navbar
+.navbar {
+  height: 65px;
+  padding: 0.5rem 0;
+  margin-bottom: 0 !important;
+  @media (max-width: $small-screen) {
+    height: 56px;
+  }
+  .container {
+    height: 100%;
+  }
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#brand {
+  height: 100%;
+  img {
+    height: 100%;
+  }
+  @media (max-width: $small-screen) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.navbar-links {
+  font-size: 1rem;
+  font-weight: 500;
+   a {
+    margin-left: 1rem;
+    color: black;
+  }
 }

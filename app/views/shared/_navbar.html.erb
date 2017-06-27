@@ -1,7 +1,13 @@
 <div class="navbar">
-  <div class="container">
-    <div id="brand-logo">
-      <%= image_tag 'logo-gansky-landing.png' %>
+  <div class="container" id="navbar">
+    <div id="brand">
+      <%= image_tag 'logo-gansky.png' %>
+    </div>
+    <div>
+      <div class="navbar-links">
+        <%= link_to "Accueil", root_path %>
+        <%= link_to "Les colocs", root_path %>
+      </div>
     </div>
   </div>
 </div>

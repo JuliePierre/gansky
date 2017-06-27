@@ -1,4 +1,8 @@
-<div class="container">
+<%= content_for(:navbar) do %>
+  <%= render 'shared/navbar' %>
+<% end %>
+
+<div class="container margin-top">
   <div class="center-flexbox space-between small-margin-bottom">
     <div class="flex-half flat-top-infos">
       <div class="flat-first-header">

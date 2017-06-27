@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'flat_applications/new'
-
-  get 'flat_applications/create'
 
   ActiveAdmin.routes(self)
   mount Attachinary::Engine => "/attachinary"
@@ -12,4 +9,6 @@ Rails.application.routes.draw do
   resources :flats, only: [:index, :show] do
     resources :user_applications, only: [:new, :create, :show]
   end
+
+  get 'conditions-generales-utilisation', to: 'pages#cgu', as: :cgu
 end
