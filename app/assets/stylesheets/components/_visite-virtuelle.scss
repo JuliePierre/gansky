@@ -1,0 +1,28 @@
+.visite-virtuelle-trigger {
+  height: 250px;
+  width: 300px;
+  cursor: pointer;
+}
+.visite-virtuelle-container {
+  position: fixed;
+  top: 25px;
+  bottom: 25px;
+  right: 25px;
+  left: 25px;
+  background-color: black;
+}
+.visite-virtuelle-controls {
+  font-size: 25px;
+  color: white;
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+  right: 0;
+}
+.visite-virtuelle-iframe {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  left: 25px;
+  top: 25px;
+}
