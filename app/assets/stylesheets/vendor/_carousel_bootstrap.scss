@@ -270,13 +270,7 @@
   float: left !important;
 }
 #full-carousel-example-generic {
-  position: fixed;
-  top: 50px;
-  right: 50px;
-  bottom: 50px;
-  left: 50px;
   width: auto !important;
-  z-index: 10000;
 }
 #full-wrapper-for-full-screen-carousel {
   z-index: 1000;
@@ -303,4 +297,16 @@
   right: 0;
   left: 0;
   cursor: pointer;
+}
+#full-screen-display {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  bottom: 50px;
+  left: 50px;
+  width: auto !important;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
