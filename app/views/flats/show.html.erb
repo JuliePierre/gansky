@@ -47,10 +47,12 @@
         <div class="carousel-inner" role="listbox">
           <div class="item active">
             <%= cl_image_tag @flat.photos.first.path, width: 470, height: 350, crop: :fill %>
+            <div class="open-full-screen-carousel"></div>
           </div>
           <% @flat.photos[1...@flat.photos.size].each do |photo| %>
             <div class="item">
               <%= cl_image_tag photo.path, width: 470, height: 350, crop: :fill %>
+              <div class="open-full-screen-carousel"></div>
             </div>
           <% end %>
         </div>
@@ -244,3 +246,31 @@
       </div>
     </div>
   </div>
+
+
+<!-- FULL SCREEN CAROUSEL -->
+<div id="full-carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= cl_image_tag @flat.photos.first.path %>
+    </div>
+    <% @flat.photos[1...@flat.photos.size].each do |photo| %>
+      <div class="item">
+        <%= cl_image_tag photo.path %>
+      </div>
+    <% end %>
+  </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#full-carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#full-carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <div id="close-full-screen-carousel"><i class="fa fa-times" aria-hidden="true"></i></div>
+</div>
+<div id="full-wrapper-for-full-screen-carousel">
+</div>
