@@ -1,5 +1,6 @@
 #see-flats-button {
   margin-top: 50px;
+  letter-spacing: -0.05rem;
   @media (max-width: $small-screen) {
     margin-top: 20px;
   }
@@ -13,7 +14,7 @@
 .header {
   text-transform: uppercase;
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 0;
   margin-bottom: 1rem;
   @media (max-width: $small-screen) {
@@ -23,14 +24,14 @@
 .subtitle {
   margin-top: 0;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   @media (max-width: $small-screen) {
     font-size: 15px;
   }
 }
 
 #landing-explanation {
-  padding: 1rem 0;
+  padding: 2rem 0;
   flex: 1 0 auto;
   display: flex;
   align-items: center;
@@ -76,10 +77,13 @@
 }
 .content-header {
   text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
 }
 #landing-flats{
   .row .col {
     padding: 0 1rem;
+    margin-bottom: 1rem;
   }
 }
 #carte-cergy {

@@ -56,4 +56,6 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: "gansky.fr" }
 
+  config.i18n.default_locale = :fr
+  config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{fr,yml}').to_s]
 end

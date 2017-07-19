@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170622131127) do
+ActiveRecord::Schema.define(version: 20170719153112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 20170622131127) do
     t.string   "zipcode"
     t.string   "city"
     t.string   "neighborhood"
-    t.string   "availability_date"
+    t.date     "availability_date"
     t.index ["slug"], name: "index_flats_on_slug", unique: true, using: :btree
   end
 
@@ -90,6 +90,12 @@ ActiveRecord::Schema.define(version: 20170622131127) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "user_applications", force: :cascade do |t|

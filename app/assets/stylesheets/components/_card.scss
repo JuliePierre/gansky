@@ -17,6 +17,7 @@
 .flat-card-header {
   color: white;
   text-align: center;
+  font-weight: 500;
   h3 {
     font-size: 30px;
     margin: 0;
@@ -31,6 +32,7 @@
   justify-content: space-between;
   background-color: $brand-dark-grey;
   color: white;
+  font-weight: 500;
 }
 .general-infos {
   padding: 0.75rem 1rem;
@@ -55,6 +57,7 @@
 }
 .infos-subtitle {
   font-size: 12px;
+  font-weight: 400;
 }
 .card-link {
   position: absolute;

@@ -21,7 +21,8 @@ permit_params :name, :address, :zipcode, :city, :neighborhood, :description, :su
 
 form do |f|
     f.semantic_errors *f.object.errors.keys
-    f.inputs # Include the default inputs
+    f.inputs :except => [:availability_date] # Include the default inputs
+    f.input :availability_date, :as => :string, :input_html => {:class => 'datepicker hasDatePicker'}
     f.input :map_picture, as: :formtastic_attachinary
     f.input :cover_picture, as: :formtastic_attachinary
     f.input :photos, as: :formtastic_attachinary
