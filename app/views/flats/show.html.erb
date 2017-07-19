@@ -1,6 +1,3 @@
-<%= content_for(:navbar) do %>
-  <%= render 'shared/navbar' %>
-<% end %>
 <%= content_for(:meta_title) do %>
   <%= "Gansky - Appartement #{@flat.name} - #{@flat.nb_rooms} Chambres" %>
 <% end %>
@@ -69,28 +66,28 @@
       </div>
     </div>
     <div class="flex-half left-padded flexbox column space-between hide-on-small-only">
-      <div class="content-sub-header">Description</div>
+      <div class="content-sub-header no-margin">Description</div>
       <p class="no-margin"><%= @flat.description %></p>
-      <p class="text-center">Prix <span class="gras">tout compris</span> incluant</p>
+      <p class="text-center">Prix <span class="gras">tout compris</span> incluant notamment</p>
       <div class="start-flexbox">
-        <div class="flex-quarter text-center uppercase">
-          <%= image_tag 'icon-electricity.svg', class: 'landing-icon' %>
+        <div class="flex-quarter text-center uppercase general-facilities">
+          <%= image_tag 'icon-electricity.svg', class: 'general-facilities-icon' %>
           <br>
           Electricité
         </div>
-        <div class="flex-quarter text-center uppercase">
-          <%= image_tag 'icon-wifi.svg', class: 'landing-icon' %>
+        <div class="flex-quarter text-center uppercase general-facilities">
+          <%= image_tag 'icon-wifi.svg', class: 'general-facilities-icon' %>
           <br>
           Wifi
         </div>
-        <div class="flex-quarter text-center uppercase">
-          <%= image_tag 'icon-tap.svg', class: 'landing-icon' %>
+        <div class="flex-quarter text-center uppercase general-facilities">
+          <%= image_tag 'icon-tap.svg', class: 'general-facilities-icon' %>
           <br>
           Eau<br>
           Chauffage
         </div>
-        <div class="flex-quarter text-center uppercase">
-          <%= image_tag 'icon-tv.svg', class: 'landing-icon' %>
+        <div class="flex-quarter text-center uppercase general-facilities">
+          <%= image_tag 'icon-tv.svg', class: 'general-facilities-icon' %>
           <br>
           Tv
         </div>

@@ -1,14 +1,10 @@
-<%= content_for(:navbar) do %>
-  <%= render 'shared/home_navbar' %>
-<% end %>
-
 <div id="landing-banner" class="flexbox column space-between">
   <div id="landing-background" style="background-image: url(<%= image_url('landing-background.jpg') %>);">
     <div id="landing-background-infos">
       <%= image_tag 'icon-home.png', id: "landing-bg-icon" %>
       <h2 class="header">La coloc' idéale</h2>
       <p class="subtitle">Les meilleurs offres de colocation à Cergy Préfecture</p>
-      <div id="see-flats-button" class="btn-gansky">Voir les appartements<i class="fa fa-search" aria-hidden="true"></i></div>
+      <div id="see-flats-button" class="see-flats-button btn-gansky">Voir les appartements<i class="fa fa-search" aria-hidden="true"></i></div>
     </div>
   </div>
   <div id="landing-explanation" class="bg-grey">

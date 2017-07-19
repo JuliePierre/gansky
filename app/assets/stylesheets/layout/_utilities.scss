@@ -17,7 +17,7 @@ body {
   padding-left: 1rem;
 }
 .no-margin {
-  margin: 0;
+  margin: 0 !important;
 }
 .margin-bottom {
   margin-bottom: 5rem;
@@ -141,4 +141,11 @@ body {
 .hidden {
   display: none;
   z-index: -1 !important;
+}
+.full-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
