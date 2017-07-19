@@ -180,18 +180,30 @@
   </div>
   <div class="horizontal-line">
   </div>
-    <div class="content-sub-header">
-      Localisation
+  <div class="content-sub-header">
+    Localisation
+  </div>
+  <div class="row">
+    <div class="col s12 m8">
+      <%= cl_image_tag @flat.map_picture.path, class: 'flat-map' %>
     </div>
-    <div class="row">
-      <div class="col s12 m8">
-        <%= cl_image_tag @flat.map_picture.path, class: 'flat-map' %>
-      </div>
-      <div class="col s12 m4">
-        <span class="gras"><%= @flat.address %></span>, <%= @flat.neighborhood %>
-        <p><%= @flat.sub_description %></p>
-      </div>
+    <div class="col s12 m4">
+      <span class="gras"><%= @flat.address %></span>, <%= @flat.neighborhood %>
+      <p><%= @flat.sub_description %></p>
     </div>
+  </div>
+  <div class="horizontal-line">
+  </div>
+  <div class="content-sub-header">
+    Visite virtuelle
+  </div>
+  <div class="visite-virtuelle-trigger-container">
+    <div class="visite-virtuelle-trigger" data-id="<%= @flat.id %>" style="background-image: url(<%= image_url('landing-background.jpg') %>);">
+        <span class="visite-virtuelle-texte">VISITER</span>
+        <div class="visite-virtuelle-trigger-wrapper">
+        </div>
+    </div>
+  </div>
   <div class="horizontal-line">
   </div>
   <div class="text-center margin-bottom hide-on-small-only">
@@ -218,37 +230,33 @@
 
 
 
-  <div id="flat-page-explanation" class="bg-grey hide-on-small-only">
-    <div class=" container explanation-content">
-      <div class="content-item">
-        <div class="content-header center-flexbox">
-          <%= image_tag 'icon-table.svg', class: 'landing-icon' %>
-          <div class="left-padded">
-            Des colocs entièrement <span class="red-text">meublées et équipées</span>
-          </div>
+<div id="flat-page-explanation" class="bg-grey hide-on-small-only">
+  <div class=" container explanation-content">
+    <div class="content-item">
+      <div class="content-header center-flexbox">
+        <%= image_tag 'icon-table.svg', class: 'landing-icon' %>
+        <div class="left-padded">
+          Des colocs entièrement <span class="red-text">meublées et équipées</span>
         </div>
       </div>
-      <div class="content-item">
-        <div class="content-header center-flexbox">
-          <%= image_tag 'icon-key.svg', class: 'landing-icon' %>
-          <div class="left-padded">
-          Des prix <span class="red-text">tout compris</span> et pas de suprise
-          </div>
+    </div>
+    <div class="content-item">
+      <div class="content-header center-flexbox">
+        <%= image_tag 'icon-key.svg', class: 'landing-icon' %>
+        <div class="left-padded">
+        Des prix <span class="red-text">tout compris</span> et pas de suprise
         </div>
       </div>
-      <div class="content-item">
-        <div class="content-header center-flexbox">
-          <%= image_tag 'icon-web.svg', class: 'landing-icon' %>
-          <div class="left-padded">
-            Simple et facile intégralement en ligne
-          </div>
+    </div>
+    <div class="content-item">
+      <div class="content-header center-flexbox">
+        <%= image_tag 'icon-web.svg', class: 'landing-icon' %>
+        <div class="left-padded">
+          Simple et facile intégralement en ligne
         </div>
       </div>
     </div>
   </div>
-
-
-<div class="visite-virtuelle-trigger" data-id="<%= @flat.id %>" style="background-image: url(<%= image_url('landing-background.jpg') %>);">
 </div>
 
 <div class="visite-virtuelle-container hidden">
