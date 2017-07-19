@@ -9,7 +9,7 @@ controller do
   end
 end
 
-permit_params :name, :address, :zipcode, :city, :neighborhood, :description, :sub_description, :nb_rooms, :price_per_room, :occupied, :availability_date, :virtual_visit, :map_picture, :cover_picture, photos: [], facility_ids: []
+permit_params :name, :address, :zipcode, :city, :neighborhood, :description, :sub_description, :nb_rooms, :price_per_room, :occupied, :availability_date, :virtual_visit, :virtual_visit_trigger_picture, :map_picture, :cover_picture, photos: [], facility_ids: []
 #
 # or
 #
@@ -24,6 +24,7 @@ form do |f|
     f.inputs :except => [:availability_date] # Include the default inputs
     f.input :availability_date, :as => :string, :input_html => {:class => 'datepicker hasDatePicker'}
     f.input :map_picture, as: :formtastic_attachinary
+    f.input :virtual_visit_trigger_picture, as: :formtastic_attachinary
     f.input :cover_picture, as: :formtastic_attachinary
     f.input :photos, as: :formtastic_attachinary
     f.inputs "Facilities" do # Make a panel that holds inputs for lifestyles
@@ -45,6 +46,7 @@ show do
       row :occupied
       row :availability_date
       row :map_picture
+      row :virtual_visit_trigger_picture
       row :cover_picture
       row :photos
       row :virtual_visit

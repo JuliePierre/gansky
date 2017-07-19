@@ -200,7 +200,12 @@
       Visite virtuelle
     </div>
     <div class="visite-virtuelle-trigger-container">
-      <div class="visite-virtuelle-trigger" data-id="<%= @flat.id %>" style="background-image: url(<%= image_url('landing-background.jpg') %>);">
+    <% if @flat.virtual_visit_trigger_picture %>
+      <% picture_url = cl_image_path @flat.virtual_visit_trigger_picture.path %>
+    <% else %>
+      <% picture_url = image_url('landing-background.jpg') %>
+    <% end %>
+      <div class="visite-virtuelle-trigger" data-id="<%= @flat.id %>" style="background-image: url('<%= picture_url %>');">
           <span class="visite-virtuelle-texte">VISITER</span>
           <div class="visite-virtuelle-trigger-wrapper">
           </div>

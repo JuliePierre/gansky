@@ -4,6 +4,7 @@ class Flat < ApplicationRecord
   has_attachment :map_picture
   has_attachment :cover_picture
   has_attachments :photos
+  has_attachment :virtual_visit_trigger_picture
 
   has_many :flat_facilities, dependent: :destroy
   has_many :facilities, through: :flat_facilities
