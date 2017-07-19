@@ -192,18 +192,23 @@
       <p><%= @flat.sub_description %></p>
     </div>
   </div>
-  <div class="horizontal-line">
-  </div>
-  <div class="content-sub-header">
-    Visite virtuelle
-  </div>
-  <div class="visite-virtuelle-trigger-container">
-    <div class="visite-virtuelle-trigger" data-id="<%= @flat.id %>" style="background-image: url(<%= image_url('landing-background.jpg') %>);">
-        <span class="visite-virtuelle-texte">VISITER</span>
-        <div class="visite-virtuelle-trigger-wrapper">
-        </div>
+  <!-- Visite virtuelle -->
+  <% if @flat.virtual_visit %>
+    <div class="horizontal-line">
     </div>
-  </div>
+    <div class="content-sub-header">
+      Visite virtuelle
+    </div>
+    <div class="visite-virtuelle-trigger-container">
+      <div class="visite-virtuelle-trigger" data-id="<%= @flat.id %>" style="background-image: url(<%= image_url('landing-background.jpg') %>);">
+          <span class="visite-virtuelle-texte">VISITER</span>
+          <div class="visite-virtuelle-trigger-wrapper">
+          </div>
+      </div>
+    </div>
+  <% end %>
+  <!--  -->
+
   <div class="horizontal-line">
   </div>
   <div class="text-center margin-bottom hide-on-small-only">
@@ -266,7 +271,7 @@
     </div>
   </div>
   <div class="visite-virtuelle-iframe hidden" data-id="<%= @flat.id %>">
-    <iframe src="https://360.meero.fr/YGnEN1HKHX5bKpxqwn5YZHJg" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+    <iframe src=<%= @flat.virtual_visit %> width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
     </iframe>
   </div>
 </div>

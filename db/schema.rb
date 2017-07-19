@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719153112) do
+ActiveRecord::Schema.define(version: 20170719162455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 20170719153112) do
     t.string   "city"
     t.string   "neighborhood"
     t.date     "availability_date"
+    t.string   "virtual_visit"
     t.index ["slug"], name: "index_flats_on_slug", unique: true, using: :btree
   end
 

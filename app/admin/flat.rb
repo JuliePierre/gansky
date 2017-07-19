@@ -9,7 +9,7 @@ controller do
   end
 end
 
-permit_params :name, :address, :zipcode, :city, :neighborhood, :description, :sub_description, :nb_rooms, :price_per_room, :occupied, :availability_date, :map_picture, :cover_picture, photos: [], facility_ids: []
+permit_params :name, :address, :zipcode, :city, :neighborhood, :description, :sub_description, :nb_rooms, :price_per_room, :occupied, :availability_date, :virtual_visit, :map_picture, :cover_picture, photos: [], facility_ids: []
 #
 # or
 #
@@ -47,6 +47,7 @@ show do
       row :map_picture
       row :cover_picture
       row :photos
+      row :virtual_visit
     end
   panel "Facilities" do
     table_for flat.facilities do
