@@ -8,6 +8,6 @@ class UserApplicationMailer < ApplicationMailer
   def new_application(user_application, flat)
     @user = user_application
     @flat = flat
-    mail(to: "julie.pierre3@gmail.com", subject: 'Nouvelle demande de visite', skip_premailer: true)
+    mail(to: "leslarrisorange@gmail.com", subject: 'Nouvelle demande de visite', skip_premailer: true)
   end
 end
