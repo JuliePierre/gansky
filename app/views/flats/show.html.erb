@@ -43,14 +43,20 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <%= cl_image_tag @flat.photos.first.path, width: 470, height: 350, crop: :fill %>
+            <% if @flat.cover_picture %>
+              <%= cl_image_tag @flat.cover_picture.path, width: 470, height: 350, crop: :fill  %>
+            <% else %>
+              <%= image_tag("photo-generique-appartement.jpg", width: 470, height: 350) %>
+            <% end %>
             <div class="open-full-screen-carousel"></div>
           </div>
-          <% @flat.photos[1...@flat.photos.size].each do |photo| %>
-            <div class="item">
-              <%= cl_image_tag photo.path, width: 470, height: 350, crop: :fill %>
-              <div class="open-full-screen-carousel"></div>
-            </div>
+          <% unless @flat.photos.size == 0 %>
+            <% @flat.photos.each do |photo| %>
+              <div class="item">
+                <%= cl_image_tag photo.path, width: 470, height: 350, crop: :fill %>
+                <div class="open-full-screen-carousel"></div>
+              </div>
+            <% end %>
           <% end %>
         </div>
 
@@ -182,7 +188,11 @@
   </div>
   <div class="row">
     <div class="col s12 m8">
-      <%= cl_image_tag @flat.map_picture.path, class: 'flat-map' %>
+      <% if @flat.map_picture %>
+        <%= cl_image_tag @flat.map_picture.path, class: 'flat-map' %>
+      <% else %>
+        <%= image_tag "carte-larris-orange.jpg", class: 'flat-map' %>
+      <% end %>
     </div>
     <div class="col s12 m4">
       <span class="gras"><%= @flat.address %></span>, <%= @flat.neighborhood %>
@@ -279,30 +289,32 @@
 </div>
 
 <!-- FULL SCREEN CAROUSEL -->
-<div id="full-screen-display" class="hidden">
-  <div id="full-carousel-example-generic" class="carousel slide hidden" data-ride="carousel">
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <%= cl_image_tag @flat.photos.first.path, width: 800, height: 600, crop: :fill %>
-      </div>
-      <% @flat.photos[1...@flat.photos.size].each do |photo| %>
-        <div class="item">
-          <%= cl_image_tag photo.path, width: 800, height: 600, crop: :fill %>
+<% unless @flat.photos.size == 0 %>
+  <div id="full-screen-display" class="hidden">
+    <div id="full-carousel-example-generic" class="carousel slide hidden" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= cl_image_tag @flat.photos.first.path, width: 800, height: 600, crop: :fill %>
         </div>
-      <% end %>
+        <% @flat.photos[1...@flat.photos.size].each do |photo| %>
+          <div class="item">
+            <%= cl_image_tag photo.path, width: 800, height: 600, crop: :fill %>
+          </div>
+        <% end %>
+      </div>
+      <!-- Controls -->
+      <a class="left carousel-control" href="#full-carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#full-carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <div id="close-full-screen-carousel"><i class="fa fa-times" aria-hidden="true"></i></div>
     </div>
-    <!-- Controls -->
-    <a class="left carousel-control" href="#full-carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#full-carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    <div id="close-full-screen-carousel"><i class="fa fa-times" aria-hidden="true"></i></div>
   </div>
-</div>
-<div id="full-wrapper-for-full-screen-carousel" class="hidden">
-</div>
+  <div id="full-wrapper-for-full-screen-carousel" class="hidden">
+  </div>
+<% end %>

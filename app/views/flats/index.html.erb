@@ -50,7 +50,12 @@
   <div class="row">
     <% @flats.each do |flat| %>
       <div class="col s12 m6">
-        <div class="flat-card" style="background-image: linear-gradient(135deg, rgba(150,109,105,0.2), rgba(150,109,105,0.4)), url('<%= cl_image_path flat.cover_picture.path %>');">
+      <% if flat.cover_picture %>
+        <% cover_picture = cl_image_path flat.cover_picture.path %>
+      <% else %>
+        <% cover_picture = image_path "photo-generique-appartement.jpg" %>
+      <% end %>
+        <div class="flat-card" style="background-image: linear-gradient(135deg, rgba(150,109,105,0.2), rgba(150,109,105,0.4)), url('<%= cover_picture %>');">
           <div class="flat-card-header">
             <h3><%= flat.name %></h3>
             <div class="small-line-container">
