@@ -1,3 +1,7 @@
+<%= content_for(:navbar) do %>
+  <%= render 'shared/navbar' %>
+<% end %>
+
 <%= content_for(:meta_title) do %>
   <%= "Gansky - Appartement #{@flat.name} - #{@flat.nb_rooms} Chambres" %>
 <% end %>
@@ -12,7 +16,7 @@
 <% end %>
 
 <div class="container small-margin-top">
-  <div class="center-flexbox space-between small-margin-bottom">
+  <div class="start-flexbox space-between small-margin-bottom">
     <div class="flex-half flat-top-infos">
       <div class="flat-first-header">
         <div class="uppercase flat-infos-header left"><%= @flat.name %></div>
@@ -25,7 +29,7 @@
     </div>
     <div class="flex-quarter hide-on-small-only">
       <% if @flat.occupied? %>
-        <%= link_to(root_path, class: 'btn-application btn-occupied right text-center') do %>
+        <%= link_to(root_path(anchor: "landing-flats"), class: 'btn-application btn-occupied right text-center') do %>
           Déjà Loué <br><span class="very-small-text">Voir les autres apparts</span>
         <% end %>
       <% else %>
@@ -75,27 +79,29 @@
       <div class="content-sub-header no-margin">Description</div>
       <p class="no-margin"><%= @flat.description %></p>
       <p class="text-center">Prix <span class="gras">tout compris</span> incluant notamment</p>
-      <div class="start-flexbox">
-        <div class="flex-quarter text-center uppercase general-facilities">
-          <%= image_tag 'icon-electricity.svg', class: 'general-facilities-icon' %>
-          <br>
-          Electricité
-        </div>
-        <div class="flex-quarter text-center uppercase general-facilities">
-          <%= image_tag 'icon-wifi.svg', class: 'general-facilities-icon' %>
-          <br>
-          Wifi
-        </div>
-        <div class="flex-quarter text-center uppercase general-facilities">
-          <%= image_tag 'icon-tap.svg', class: 'general-facilities-icon' %>
-          <br>
-          Eau<br>
-          Chauffage
-        </div>
-        <div class="flex-quarter text-center uppercase general-facilities">
-          <%= image_tag 'icon-tv.svg', class: 'general-facilities-icon' %>
-          <br>
-          Tv
+      <div class="general-facilities-container">
+        <div class="start-flexbox general-facilities-infos">
+          <div class="flex-quarter text-center uppercase general-facilities">
+            <%= image_tag 'icon-electricity.svg', class: 'general-facilities-icon' %>
+            <br>
+            Electricité
+          </div>
+          <div class="flex-quarter text-center uppercase general-facilities">
+            <%= image_tag 'icon-wifi.svg', class: 'general-facilities-icon' %>
+            <br>
+            Wifi
+          </div>
+          <div class="flex-quarter text-center uppercase general-facilities">
+            <%= image_tag 'icon-tap.svg', class: 'general-facilities-icon' %>
+            <br>
+            Eau<br>
+            Chauffage
+          </div>
+          <div class="flex-quarter text-center uppercase general-facilities">
+            <%= image_tag 'icon-tv.svg', class: 'general-facilities-icon' %>
+            <br>
+            Tv
+          </div>
         </div>
       </div>
     </div>
@@ -197,6 +203,9 @@
     <div class="col s12 m4">
       <span class="gras"><%= @flat.address %></span>, <%= @flat.neighborhood %>
       <p><%= @flat.sub_description %></p>
+      <% unless @flat.funky_picture.blank? %>
+        <%= cl_image_tag @flat.funky_picture.path, class: "funky-picture" %>
+      <% end %>
     </div>
   </div>
   <!-- Visite virtuelle -->
@@ -226,7 +235,7 @@
   <div class="text-center margin-bottom hide-on-small-only">
     <p>Cet appart vous intéresse ?</p>
       <% if @flat.occupied? %>
-        <%= link_to(root_path, class: 'btn-application btn-occupied text-center') do %>
+        <%= link_to(root_path(anchor: "landing-flats"), class: 'btn-application btn-occupied text-center') do %>
           Déjà Loué <br><span class="very-small-text">Voir les autres apparts</span>
         <% end %>
       <% else %>
@@ -237,7 +246,7 @@
 
 <div class="hide-on-med-and-up">
   <% if @flat.occupied? %>
-    <%= link_to(root_path, class: 'btn-mobile-application btn-occupied text-center') do %>
+    <%= link_to(root_path(anchor: "landing-flats"), class: 'btn-mobile-application btn-occupied text-center') do %>
       Déjà Loué <br><span class="very-small-text">Voir les autres apparts</span>
     <% end %>
   <% else %>
@@ -317,4 +326,8 @@
   </div>
   <div id="full-wrapper-for-full-screen-carousel" class="hidden">
   </div>
+<% end %>
+
+<%= content_for(:footer) do %>
+  <%= render 'shared/footer' %>
 <% end %>

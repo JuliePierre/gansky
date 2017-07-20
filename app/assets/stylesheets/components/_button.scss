@@ -35,15 +35,17 @@
 
 .btn-application {
   color: white;
-  background-color: $brand-red;
-  width: 170px;
-  height: 42px;
-  line-height: 42px;
+  background-color: #e12727;
+  width: 200px;
+  height: 52px;
+  line-height: 52px;
   text-align: center;
   border-radius: 10px;
   font-weight: lighter;
   cursor: pointer;
   display: inline-block;
+  font-size: 28px;
+  font-weight: 500;
 }
 .btn-application:hover {
   text-decoration: none;

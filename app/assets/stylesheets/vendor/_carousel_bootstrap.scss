@@ -269,6 +269,8 @@
 .pull-left {
   float: left !important;
 }
+
+// personnalisation du carousel
 #full-carousel-example-generic {
   width: auto !important;
 }
@@ -309,4 +311,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+#carousel-example-generic .item:hover {
+  background-color: white;
+  opacity: 0.7;
 }

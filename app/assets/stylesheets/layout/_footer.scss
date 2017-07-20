@@ -1,7 +1,7 @@
 #footer {
   background-color: $brand-dark-grey;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   color: white;
   &.full-bottom {
     position: absolute;
@@ -23,5 +23,5 @@
 }
 .footer-copyright {
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }

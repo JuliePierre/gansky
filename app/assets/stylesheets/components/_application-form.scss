@@ -1,5 +1,5 @@
 #application-form {
-  margin-top: 5rem;
+  margin-top: 1.5rem;
 }
 #confirmation-page {
   margin-top: 5rem;
@@ -25,6 +25,7 @@
   }
   .input-field {
     margin-top: 0;
+    width: 52%;
   }
 }
 .form-intro {
@@ -33,13 +34,12 @@
     font-size: 14px;
     font-weight: 500;
     margin: 0;
-    color: $brand-text-light-grey;
+    margin-bottom: 0.25rem;
   }
   p {
     margin: 0;
-    font-size: 1rem;
-    color: $brand-text-light-grey;
-    font-weight: 300;
+    font-size: 0.85rem;
+    font-weight: 400;
     padding: 0 6rem;
     line-height: 1rem;
     @media (max-width: $small-screen) {
@@ -77,7 +77,6 @@
   margin-top: 6rem;
   h6 {
     font-size: 1rem;
-    color: black;
     padding: 0 6rem;
     line-height: 1rem;
     margin: 0;
@@ -89,7 +88,7 @@
 
 }
 .user_application_applicant_infos {
-  width: 100%;
+  width: 100% !important;
   margin-bottom: 2rem;
   textarea {
     height: 15rem;
@@ -128,4 +127,8 @@
   @media (max-width: $small-screen) {
     flex: 0 0 66%;
   }
+}
+.darth-vador-picture {
+  height: 200px;
+  margin-bottom: 2rem;
 }

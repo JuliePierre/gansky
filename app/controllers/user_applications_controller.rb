@@ -1,5 +1,5 @@
 class UserApplicationsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create]
+  skip_before_action :authenticate_user!, only: [:new, :create, :show]
 
   def new
     @flat = Flat.friendly.find(params[:flat_id])

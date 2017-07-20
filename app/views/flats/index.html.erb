@@ -1,3 +1,7 @@
+<%= content_for(:navbar) do %>
+  <%= render 'shared/navbar' %>
+<% end %>
+
 <div id="landing-banner" class="flexbox column space-between">
   <div id="landing-background" style="background-image: url(<%= image_url('landing-background.jpg') %>);">
     <div id="landing-background-infos">
@@ -92,4 +96,6 @@
 
 <%= cl_image_tag @carte_cergy.photo.path, id: 'carte-cergy', alt: 'location-appartements-cergy', class: 'hide-on-small-only' %>
 
-
+<%= content_for(:footer) do %>
+  <%= render 'shared/footer' %>
+<% end %>
