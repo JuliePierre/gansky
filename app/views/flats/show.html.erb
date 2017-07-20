@@ -8,6 +8,7 @@
 <%= content_for(:meta_description) do %>
   <%= "#{@flat.name}, un appartement de #{@flat.nb_rooms} chambres dans le quartier #{@flat.neighborhood}, idéal pour une colocation." %>
 <% end %>
+<% content_for :meta_image, cloudinary_url(@flat.cover_picture.path) %>
 <%= content_for(:facebook_meta_title) do %>
   <%= "Disponible - #{@flat.nb_rooms} Chambres - Proche de l'Essec" %>
 <% end %>
