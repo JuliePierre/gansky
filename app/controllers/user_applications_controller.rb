@@ -17,7 +17,7 @@ class UserApplicationsController < ApplicationController
       @user_application.flat = @flat
       if @user_application.save
         UserMailer.confirmation(@user_application).deliver_now
-        UserApplicationMailer.new_application(@user_application).deliver_now
+        UserApplicationMailer.new_application(@user_application, @flat).deliver_now
         redirect_to  flat_user_application_path(@flat, @user_application)
       else
         render :new
