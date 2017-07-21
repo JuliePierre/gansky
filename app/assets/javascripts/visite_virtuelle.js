@@ -1,4 +1,4 @@
-$('.visite-virtuelle-trigger').click(function(){
+$('.visite-virtuelle-trigger-for-desktop').click(function(){
   id = $(this).data("id");
   $('.visite-virtuelle-container').removeClass('hidden');
   $('.visite-virtuelle-iframe[data-id=' + id + ']').removeClass('hidden');

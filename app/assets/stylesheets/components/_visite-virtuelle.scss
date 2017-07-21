@@ -12,6 +12,10 @@
   align-items: center;
   justify-content: space-around;
   position: relative;
+  @media (max-width: $small-screen) {
+    height: 200px;
+    margin-bottom: 4rem;
+  }
   .visite-virtuelle-trigger-wrapper {
     position: absolute;
     left: 0;
@@ -36,6 +40,12 @@
     .visite-virtuelle-texte {
       display: initial;
     }
+  }
+}
+.visite-virtuelle-trigger-for-mobile {
+  position: relative;
+  a {
+    z-index: 1000;
   }
 }
 .visite-virtuelle-container {

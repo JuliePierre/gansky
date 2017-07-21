@@ -55,13 +55,13 @@
             <% else %>
               <%= image_tag("photo-generique-appartement.jpg", width: 470, height: 350) %>
             <% end %>
-            <div class="open-full-screen-carousel"></div>
+            <div class="open-full-screen-carousel hide-on-small-only"></div>
           </div>
           <% unless @flat.photos.size == 0 %>
             <% @flat.photos.each do |photo| %>
               <div class="item">
                 <%= cl_image_tag photo.path, width: 470, height: 350, crop: :fill %>
-                <div class="open-full-screen-carousel"></div>
+                <div class="open-full-screen-carousel hide-on-small-only"></div>
               </div>
             <% end %>
           <% end %>
@@ -220,14 +220,20 @@
     </div>
     <div class="visite-virtuelle-trigger-container">
     <% if @flat.virtual_visit_trigger_picture %>
-      <% picture_url = cl_image_path @flat.virtual_visit_trigger_picture.path %>
+      <% picture_url = cl_image_path @flat.virtual_visit_trigger_picture.path, height: 300, width: 400, crop: :fill %>
     <% else %>
       <% picture_url = image_url('landing-background.jpg') %>
     <% end %>
-      <div class="visite-virtuelle-trigger" data-id="<%= @flat.id %>" style="background-image: url('<%= picture_url %>');">
+      <div class="visite-virtuelle-trigger-for-desktop hide-on-small-only" data-id="<%= @flat.id %>" style="background-image: url('<%= picture_url %>');">
           <span class="visite-virtuelle-texte">VISITER</span>
           <div class="visite-virtuelle-trigger-wrapper">
           </div>
+      </div>
+      <div class="visite-virtuelle-trigger visite-virtuelle-trigger-for-mobile hide-on-med-and-up" data-id="<%= @flat.id %>" style="background-image: url('<%= picture_url %>');">
+        <span class="visite-virtuelle-texte">VISITER</span>
+        <div class="visite-virtuelle-trigger-wrapper">
+        </div>
+        <%= link_to "", @flat.virtual_visit, class: "full-link", target: "_blank" %>
       </div>
     </div>
   <% end %>
