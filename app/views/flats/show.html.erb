@@ -225,7 +225,7 @@
     <% else %>
       <% picture_url = image_url('landing-background.jpg') %>
     <% end %>
-      <div class="visite-virtuelle-trigger-for-desktop hide-on-small-only" data-id="<%= @flat.id %>" style="background-image: url('<%= picture_url %>');">
+      <div class="visite-virtuelle-trigger visite-virtuelle-trigger-for-desktop hide-on-small-only" data-id="<%= @flat.id %>" style="background-image: url('<%= picture_url %>'); background-size: cover; background-position: center; background-repeat: no-repeat;">
           <span class="visite-virtuelle-texte">VISITER</span>
           <div class="visite-virtuelle-trigger-wrapper">
           </div>
