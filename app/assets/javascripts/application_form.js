@@ -11,12 +11,9 @@ $('#show-step2-btn').click(function(){
     // console.log(targetPosition)
     // $('html, body').animate({ scrollTop: targetPosition }, 'slow');
     $('#step2').removeClass("hidden");
-    $('#submit-btn').removeClass("hidden");
-
     var targetPosition = $('#step2').offset().top;
-    console.log(targetPosition);
     $('html, body').animate({ scrollTop: targetPosition }, 'slow');
-
+    $('#submit-btn').removeClass("hidden");
     $('#show-step2-btn').css({"display": "none" });
   } else {
     var $toastContent = $("<span>Vous ne pouvez pas valider des champs vides</span>");

@@ -218,6 +218,7 @@
     <div class="content-sub-header">
       Visite virtuelle
     </div>
+    <p class="hide-on-med-and-up">Cliquez sur la photo pour démarrer la visite virtuelle</p>
     <div class="visite-virtuelle-trigger-container">
     <% if @flat.virtual_visit_trigger_picture %>
       <% picture_url = cl_image_path @flat.virtual_visit_trigger_picture.path, height: 300, width: 400, crop: :fill %>
@@ -229,19 +230,17 @@
           <div class="visite-virtuelle-trigger-wrapper">
           </div>
       </div>
-      <div class="visite-virtuelle-trigger visite-virtuelle-trigger-for-mobile hide-on-med-and-up" data-id="<%= @flat.id %>" style="background-image: url('<%= picture_url %>');">
-        <span class="visite-virtuelle-texte">VISITER</span>
-        <div class="visite-virtuelle-trigger-wrapper">
-        </div>
+
+      <div class="visite-virtuelle-trigger visite-virtuelle-trigger-for-mobile hide-on-med-and-up" data-id="<%= @flat.id %>" style="background-image: url('<%= picture_url %>'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <%= link_to "", @flat.virtual_visit, class: "full-link", target: "_blank" %>
       </div>
     </div>
   <% end %>
   <!--  -->
 
-  <div class="horizontal-line">
+  <div class="horizontal-line hide-on-small-only">
   </div>
-  <div class="text-center margin-bottom hide-on-small-only">
+  <div class="text-center hide-on-small-only margin-bottom">
     <p>Cet appart vous intéresse ?</p>
       <% if @flat.occupied? %>
         <%= link_to(root_path(anchor: "landing-flats"), class: 'btn-application btn-occupied text-center') do %>
@@ -251,9 +250,10 @@
         <%= link_to "Réserver", new_flat_user_application_path(@flat), class: "btn-application" %>
       <% end %>
   </div>
+
 </div>
 
-<div class="hide-on-med-and-up">
+<div class="hide-on-med-and-up margin-top">
   <% if @flat.occupied? %>
     <%= link_to(root_path(anchor: "landing-flats"), class: 'btn-mobile-application btn-occupied text-center') do %>
       Déjà Loué <br><span class="very-small-text">Voir les autres apparts</span>
